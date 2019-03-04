@@ -12,14 +12,14 @@ class Table {
   }
 }
 
-class DynamicClass {
-    static classes = {
-        List,
-        Table
-    };
+const classes = {
+    List,
+    Table
+};
 
+class DynamicClass {
     constructor (className, opts) {
-        return new DynamicClass.classes[className](opts);
+        return new classes[className](opts);
     }
 }
 
